@@ -208,7 +208,7 @@ $W \mathrel{-}= \theta \cdot dW$ applied row-by-row:
 | ReLU | $\text{ReLU}(x) = \max(0,x)$ | $\text{ReLU}'(a) = \mathbf{1}[a > 0]$ |
 
 ReLU is used for the hidden layer to avoid the $\leq 0.25\times$ gradient attenuation of sigmoid (since $\sigma'(z) \leq 0.25$ everywhere).
-He init $\left(\pm\sqrt{2/\text{fan\_in}}\right)$ is matched to ReLU; Xavier $\left(\pm\sqrt{1/\text{fan\_in}}\right)$ is used for the softmax output layer.
+He init $\left(\pm\sqrt{2/\text{fan} \textunderscore \text{in}}\right)$ is matched to ReLU; Xavier $\left(\pm\sqrt{1/\text{fan} \textunderscore \text{in}}\right)$ is used for the softmax output layer.
 
 #### Why sigmoid saturates and dies
 
