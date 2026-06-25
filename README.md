@@ -238,6 +238,8 @@ Effective learning rate becomes $\theta \cdot n$. With $n = 60{,}000$ and $\thet
 
 ## Bugs fixed from original source
 
+Attention: The original code is currently inaccessible. The original source code was authored in 2023.
+
 | File | Bug |
 |---|---|
 | `GradientDescent.h` | $\delta_0$: `dactf` applied to `dloss` output instead of activation $a_\text{last}$ |
@@ -251,3 +253,33 @@ Effective learning rate becomes $\theta \cdot n$. With $n = 60{,}000$ and $\thet
 | All headers | Non-template free functions without `inline` causing ODR / duplicate-symbol link error |
 | `bmp/bmp_writer.h` | Global arrays without `static` causing ODR violation |
 | `optimizer/GA.h` | `std::random_device rd` at namespace scope without `inline` causing ODR violation |
+
+---
+
+## Before testing this Code
+The MNIST dataset is not included in this repository. Please download the dataset from a reputable source, such as Kaggle. You can print the MNIST dataset as a BMP image using the BMP::bmp::writeBMP() function.
+#### Example Code
+```cpp
+    BMP::bmp shader(28, 28);
+    
+    auto MNIST_train_4 = train[4].first;
+    std::cout << "MNIST_train_4 Label: " << train[4].second << std::endl;
+    
+    for (int i=0; i<28; ++i) {
+        for (int j=0; j<28; ++j) {
+            shader.red(i,j) = shader.blue(i,j) = shader.green(i,j) = MNIST_train_4[i+j*28];
+        }
+    }
+    
+    shader.writeBMP("./", "MNIST_train_4");
+```
+
+#### Result of Example Code: Image and Label
+**Printed Image**:
+[MNIST_train_4.bmp](https://github.com/user-attachments/files/29320251/MNIST_train_4.bmp)
+
+**Output**:
+```
+MNIST_train_4 Label: 9
+```
+
