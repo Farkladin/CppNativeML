@@ -276,7 +276,7 @@ The MNIST dataset is not included in this repository. Please download the datase
 
 #### Result of Example Code: Image and Label
 **Printed Image**:
-[MNIST_train_4.bmp](https://github.com/user-attachments/files/29320251/MNIST_train_4.bmp)
+![MNIST_train_4.bmp](https://github.com/user-attachments/files/29320251/MNIST_train_4.bmp)
 
 **Output**:
 ```
