@@ -1,4 +1,4 @@
-# CppNativeML
+# CppNativeML - MNIST
 
 A from-scratch C++ neural network library for MNIST digit classification.
 Originally written as a DGIST CSE302 assignment; refactored, bug-fixed, and optimised for **Apple M3 Pro 36 GB** (arm64, macOS 26.5, Xcode / clang GNU++20).
